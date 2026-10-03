@@ -1,5 +1,5 @@
-/* AngkutAja Admin & Mitra — Service Worker (PWA) */
-const CACHE = 'angkutaja-admin-v1';
+/* PickTrash Admin & Mitra — Service Worker (PWA) */
+const CACHE = 'picktrash-admin-v2';
 const ASSETS = [
   './',
   './index.html',

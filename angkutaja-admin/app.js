@@ -1,5 +1,5 @@
 /* =====================================================================
-   AngkutAja — Pusat Kendali Admin & Mitra Pabrik
+   PickTrash — Pusat Kendali Admin & Mitra Pabrik
    Aplikasi real-time dua arah dengan website warga (Supabase).
    ===================================================================== */
 
@@ -44,7 +44,7 @@ const ico = (n, w = '') => `<svg viewBox="0 0 24 24" fill="none" stroke-width="2
 
 /* ---------- AKUN ---------- */
 const ACCOUNTS = {
-  ADMIN: { email: 'admin@angkutaja.id', pass: 'admin123', name: 'Super Admin AngkutAja' },
+  ADMIN: { email: 'admin@angkutaja.id', pass: 'admin123', name: 'Super Admin PickTrash' },
   MITRA: { email: 'mitra@angkutaja.id', pass: 'mitra123', name: 'Mitra Pabrik & Daur Ulang' },
 };
 
@@ -477,7 +477,7 @@ function openSheet(id) {
   $('#sheetClose').onclick = closeSheet;
   $('#waBtn').onclick = () => {
     const num = String(o.customer_phone || '').replace(/\D/g, '').replace(/^0/, '62');
-    window.open(`https://wa.me/${num}?text=${encodeURIComponent(`AngkutAja - Pesanan ${o.id}\nHalo ${o.customer_name || ''}, pesanan Anda sedang kami proses.`)}`, '_blank');
+    window.open(`https://wa.me/${num}?text=${encodeURIComponent(`PickTrash - Pesanan ${o.id}\nHalo ${o.customer_name || ''}, pesanan Anda sedang kami proses.`)}`, '_blank');
   };
   $('#saveBtn').onclick = async () => {
     const btn = $('#saveBtn'); btn.disabled = true;
@@ -511,7 +511,10 @@ $('#refreshBtn').onclick = () => { refreshAll(); toast('Menyegarkan data', 'Meng
 $('#bellBtn').onclick = () => { S.tab = 'notif'; buildTabs(); render(); };
 
 /* ---------- PWA ---------- */
-if ('serviceWorker' in navigator) {
+// Di dalam aplikasi Android native semua aset sudah dibundel di APK,
+// jadi service worker tidak didaftarkan (aset dimuat lewat pemuat aset).
+const IS_NATIVE_APP = window.location.host === 'angkutaja-admin.local';
+if ('serviceWorker' in navigator && !IS_NATIVE_APP) {
   window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
 }
 
