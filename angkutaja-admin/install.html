@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Pasang Aplikasi — AngkutAja Admin & Mitra</title>
+<meta name="theme-color" content="#06080f" />
+<style>
+  :root{--bg:#06080f;--card:#111726;--card2:#161d2f;--line:#22304a;--txt:#eaf0fb;--txt2:#9aabc7;--txt3:#64748b;--brand:#2ee6a8;--brand2:#14b8a6;--violet:#a78bfa;--rose:#fb7185}
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  body{background:radial-gradient(900px 500px at 85% -10%,rgba(46,230,168,.10),transparent 60%),var(--bg);color:var(--txt);
+       font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:15px;line-height:1.55;
+       padding:calc(env(safe-area-inset-top,0px) + 24px) 18px calc(env(safe-area-inset-bottom,0px) + 40px);min-height:100vh}
+  .wrap{max-width:520px;margin:0 auto}
+  .brand{display:flex;align-items:center;gap:12px;margin-bottom:26px}
+  .logo{width:50px;height:50px;border-radius:15px;background:linear-gradient(140deg,var(--brand),var(--brand2));display:grid;place-items:center;
+        box-shadow:0 10px 26px -8px rgba(46,230,168,.55)}
+  .logo svg{width:26px;height:26px;stroke:#04140e}
+  h1{font-size:22px;font-weight:800;letter-spacing:-.5px;line-height:1.2}
+  .sub{font-size:11px;color:var(--txt2);font-weight:600;letter-spacing:.5px;text-transform:uppercase}
+  h2{font-size:15px;font-weight:800;margin:26px 0 12px;letter-spacing:-.2px;display:flex;align-items:center;gap:9px}
+  h2 svg{width:18px;height:18px;stroke:var(--brand)}
+  .card{background:linear-gradient(160deg,var(--card),var(--card2));border:1px solid var(--line);border-radius:18px;padding:18px;margin-bottom:12px}
+  .role{display:flex;gap:10px;margin-bottom:18px}
+  .role div{flex:1;border:1px solid var(--line);border-radius:14px;padding:12px;text-align:center;background:var(--bg)}
+  .role b{display:block;font-size:13px;margin-bottom:3px}
+  .role span{font-size:11px;color:var(--txt2)}
+  .role .a{border-color:rgba(46,230,168,.4)}.role .a b{color:var(--brand)}
+  .role .b{border-color:rgba(167,139,250,.4)}.role .b b{color:var(--violet)}
+  ol{list-style:none;counter-reset:s}
+  ol li{counter-increment:s;position:relative;padding:0 0 16px 38px;font-size:14px;color:var(--txt2)}
+  ol li:last-child{padding-bottom:0}
+  ol li::before{content:counter(s);position:absolute;left:0;top:0;width:25px;height:25px;border-radius:8px;background:var(--brand);color:#04140e;
+                font-size:12px;font-weight:800;display:grid;place-items:center}
+  ol li b{color:var(--txt);font-weight:700}
+  .btn{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;padding:15px;border-radius:14px;font-size:14.5px;font-weight:800;
+       text-decoration:none;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#04140e;margin-top:8px;
+       box-shadow:0 12px 26px -12px rgba(46,230,168,.7)}
+  .btn svg{width:18px;height:18px;stroke:#04140e}
+  .btn.alt{background:var(--card);border:1px solid var(--line);color:var(--txt);box-shadow:none}
+  .btn.alt svg{stroke:var(--txt)}
+  .btn.vio{background:linear-gradient(135deg,var(--violet),#7c3aed);color:#fff;box-shadow:0 12px 26px -12px rgba(167,139,250,.7)}
+  .btn.vio svg{stroke:#fff}
+  code{background:var(--card2);border:1px solid var(--line);padding:2px 7px;border-radius:7px;color:var(--brand);font-size:12.5px;font-family:ui-monospace,monospace}
+  .note{background:rgba(251,191,36,.08);border:1px solid rgba(251,191,36,.3);border-radius:13px;padding:13px 15px;font-size:12.5px;color:#fbbf24;line-height:1.6;margin-top:14px}
+  .note b{color:#fde68a}
+  a.lnk{color:var(--brand);text-decoration:none;font-weight:700}
+  footer{margin-top:32px;text-align:center;font-size:11.5px;color:var(--txt3)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">
+    <div class="logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 17h13M14 17l3-9 4 9M5 17V9h5l3 3h3"/><circle cx="7.5" cy="19.5" r="1.6"/><circle cx="17.5" cy="19.5" r="1.6"/>
+      </svg>
+    </div>
+    <div><h1>Pasang Aplikasi</h1><div class="sub">AngkutAja Admin &amp; Mitra Pabrik</div></div>
+  </div>
+
+  <div class="role">
+    <div class="a"><b>ADMIN</b><span>Kelola pesanan warga</span></div>
+    <div class="b"><b>MITRA PABRIK</b><span>Pasokan &amp; booking</span></div>
+  </div>
+
+  <a class="btn" href="./">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5M15 12H3"/></svg>
+    Buka Aplikasi
+  </a>
+
+  <h2><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M12 18h.01"/></svg> Android</h2>
+  <div class="card">
+    <ol>
+      <li><b>Pakai APK</b> — unduh <code>AngkutAja-Admin.apk</code>, lalu pasang (izinkan "Instal dari sumber tidak dikenal").</li>
+      <li><b>Tanpa APK</b> — buka <b>Chrome</b>, tekan menu ⋮ → <b>Tambahkan ke layar utama</b>.</li>
+      <li>Ikon aplikasi muncul di layar utama seperti aplikasi biasa.</li>
+    </ol>
+  </div>
+
+  <h2><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"/><path d="M12 8v8M8 12h8"/></svg> iPhone / iPad</h2>
+  <div class="card">
+    <ol>
+      <li>Buka tautan aplikasi ini di <b>Safari</b> (bukan Chrome).</li>
+      <li>Tekan tombol <b>Bagikan</b> (kotak dengan panah ke atas).</li>
+      <li>Pilih <b>Tambahkan ke Layar Utama</b>, lalu <b>Tambah</b>.</li>
+      <li>Aplikasi tampil penuh layar tanpa alamat web — seperti aplikasi asli.</li>
+    </ol>
+    <a class="btn vio" href="AngkutAja-Admin-iOS.mobileconfig">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5M12 15V3"/></svg>
+      Unduh Profil iOS (otomatis)
+    </a>
+    <div class="note">
+      <b>Cara pasang profil:</b> setelah diunduh, buka <b>Pengaturan</b> → <b>Umum</b> → <b>VPN &amp; Perangkat</b> → <b>Profil</b> → pilih <b>AngkutAja Admin</b> → <b>Pasang</b>.
+    </div>
+  </div>
+
+  <h2><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Akun Masuk</h2>
+  <div class="card">
+    <p style="font-size:13.5px;color:var(--txt2);line-height:1.9">
+      Admin — <code>admin@angkutaja.id</code> / <code>admin123</code><br />
+      Mitra — <code>mitra@angkutaja.id</code> / <code>mitra123</code>
+    </p>
+    <div class="note">
+      <b>Penting:</b> aplikasi ini khusus <b>Admin</b> dan <b>Mitra Pabrik</b>. Warga yang ingin memesan jasa angkut silakan buka
+      <a class="lnk" href="https://divisiatm17-cmd.github.io/">website warga</a>.
+    </div>
+  </div>
+
+  <footer>AngkutAja — Sidoarjo · Dikembangkan oleh Rizqillah</footer>
+</div>
+</body>
+</html>
