@@ -1,6 +1,6 @@
-# AngkutAja — Pusat Kendali Admin & Mitra Pabrik
+# PickTrash — Pusat Kendali Admin & Mitra Pabrik
 
-Aplikasi operasional resmi **AngkutAja** untuk **Admin** dan **Mitra Pabrik / Daur Ulang**.
+Aplikasi operasional resmi **PickTrash** untuk **Admin** dan **Mitra Pabrik / Daur Ulang**.
 Terhubung **real-time dua arah** dengan website warga lewat Supabase (backend yang sama).
 
 > **Pembagian peran**
@@ -106,4 +106,4 @@ Keystore: `../keystore/angkutaja-release.jks` (alias `angkutaja`).
 
 ---
 
-Dikembangkan oleh **Rizqillah** — AngkutAja, Sidoarjo.
+Dikembangkan oleh **Rizqillah** — PickTrash, Sidoarjo.

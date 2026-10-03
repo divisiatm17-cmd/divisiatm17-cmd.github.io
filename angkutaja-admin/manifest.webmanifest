@@ -1,7 +1,7 @@
 {
-  "name": "AngkutAja — Pusat Kendali Admin & Mitra",
-  "short_name": "AngkutAja Admin",
-  "description": "Aplikasi Admin & Mitra Pabrik AngkutAja. Real-time dua arah dengan website warga.",
+  "name": "PickTrash — Pusat Kendali Admin & Mitra",
+  "short_name": "PickTrash Admin",
+  "description": "Aplikasi Admin & Mitra Pabrik PickTrash. Real-time dua arah dengan website warga.",
   "id": "/angkutaja-admin/",
   "start_url": "./index.html",
   "scope": "./",
