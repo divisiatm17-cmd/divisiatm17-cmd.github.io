@@ -1,5 +1,5 @@
-/* Angkut Aja — Service Worker (PWA offline shell + runtime cache) */
-const VERSION = 'angkut-aja-v2';
+/* PickTrash — Service Worker (PWA offline shell + runtime cache) */
+const VERSION = 'picktrash-v3';
 const SHELL_CACHE = `${VERSION}-shell`;
 const RUNTIME_CACHE = `${VERSION}-runtime`;
 
