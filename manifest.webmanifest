@@ -1,0 +1,46 @@
+{
+  "name": "Angkut Aja - Jasa Angkut & Pengolahan Sampah Indonesia",
+  "short_name": "Angkut Aja",
+  "description": "Jasa penjemputan sampah rumah tangga, kasur bekas, puing renovasi, dan daur ulang resmi di Kabupaten Sidoarjo. Tarif pasti, armada siap, pembuangan legal.",
+  "lang": "id",
+  "dir": "ltr",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui", "browser"],
+  "orientation": "portrait-primary",
+  "background_color": "#0e111a",
+  "theme_color": "#2347d6",
+  "categories": ["business", "utilities", "productivity"],
+  "prefer_related_applications": false,
+  "icons": [
+    { "src": "/icons/icon-144.png", "sizes": "144x144", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "Pesan Penjemputan",
+      "short_name": "Pesan",
+      "description": "Buat pesanan penjemputan sampah baru",
+      "url": "/?source=pwa&action=pesan#pesan-angkut",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Cek Area Sidoarjo",
+      "short_name": "Area",
+      "description": "Lihat peta jangkauan armada Sidoarjo",
+      "url": "/?source=pwa&action=area#livegps-sidoarjo",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Panduan Pilah Sampah",
+      "short_name": "Panduan",
+      "description": "Edukasi memilah sampah rumah tangga",
+      "url": "/?source=pwa&action=panduan#penjelasan-edukasi",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
