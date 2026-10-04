@@ -3,8 +3,8 @@
    Aplikasi real-time dua arah dengan website warga (Supabase).
    ===================================================================== */
 
-const SUPA_URL = 'https://elcwzaizbclgoxmqoeia.supabase.co';
-const SUPA_KEY = 'sb_publishable_zghi0H2v9iHBC6zFeVYzTg_3G2MK-mr';
+const SUPA_URL = 'https://svlsqojuhfwmeilvsdmk.supabase.co';
+const SUPA_KEY = 'sb_publishable_x_jn9aRjPhYEH3aEIGn3nQ_fHZj-Edx';
 
 const sb = window.supabase.createClient(SUPA_URL, SUPA_KEY, {
   realtime: { params: { eventsPerSecond: 10 } },
