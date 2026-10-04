@@ -1,5 +1,5 @@
 /* PickTrash — Service Worker (PWA offline shell + runtime cache) */
-const VERSION = 'picktrash-v5';
+const VERSION = 'picktrash-v6';
 const SHELL_CACHE = `${VERSION}-shell`;
 const RUNTIME_CACHE = `${VERSION}-runtime`;
 
