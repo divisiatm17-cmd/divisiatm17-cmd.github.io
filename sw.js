@@ -1,5 +1,5 @@
 /* PickTrash — Service Worker (PWA offline shell + runtime cache) */
-const VERSION = 'picktrash-v6';
+const VERSION = 'picktrash-v7';
 const SHELL_CACHE = `${VERSION}-shell`;
 const RUNTIME_CACHE = `${VERSION}-runtime`;
 
@@ -39,6 +39,9 @@ self.addEventListener('fetch', (event) => {
 
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return; // let cross-origin (fonts, tiles) pass through
+
+  // Jangan campuri aplikasi admin/mitra yang punya service worker sendiri.
+  if (url.pathname.startsWith('/angkutaja-admin')) return;
 
   // App navigation: network first, fall back to cached shell (offline support)
   if (request.mode === 'navigate') {
